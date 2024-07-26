@@ -1,0 +1,31 @@
+<div class="flex_container">
+
+    <div class="left_flex">
+        <div class="logo">
+            <img src="assets/images/Borcelle.png" alt="logo image">
+        </div>
+        <h4>Jesus <span class="lastName">Garcia</span></h4>
+    </div>
+    <div class="center_flex">
+        <ul class="list_Content">
+            <li class="nav_item">
+                <a (click)="scrollTo('hoIam')">HO IAM</a>
+            </li>
+            <li class="nav_item">
+                <a (click)="scrollTo('about')">ABOUT ME</a>
+            </li>
+            <li class="nav_item">
+                <a href="home">SERVICES</a>
+            </li>
+            <li class="nav_item">
+                <a href="home">SKILLS</a>
+            </li>
+            <li class="nav_item">
+                <a href="home">PORTFOLIO</a>
+            </li>
+        </ul>
+    </div>
+    <div class="right_flex"></div>
+
+</div>
+<router-outlet></router-outlet>
