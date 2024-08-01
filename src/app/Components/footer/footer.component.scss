@@ -1,0 +1,188 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container_grid{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.upper_grid_Container{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.navegation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.center_flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    }
+    
+    .list_Content{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        gap: 1rem;
+        padding: 5px;
+        list-style: none;
+    }
+    
+    .nav_item{
+        color:black;
+        padding: 15px;
+    }
+    
+    .nav_item a{
+        text-decoration: none;
+        color:black;
+        text-decoration-color: white;
+        position: relative;
+        font-weight: 500;
+        font-size: 18px;
+        text-align: center;
+        display: block;
+    }
+    .nav_item a::after {
+        content: "";
+        height: 2px;
+        background: rgb(0, 105, 255);
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        transition: 600ms ease;
+    }
+    .nav_item a:hover::after {
+        width: 100px;
+    }
+    .nav_item a:hover{
+        color: gray;
+        text-underline-offset: 1rem;
+        text-decoration-color: rgb(181, 181, 181);
+        transition: 600ms ease;
+    
+    }
+#ts{
+
+    position: absolute;
+    top:2rem;
+    left: 6rem;
+}
+
+#vb{
+
+    position: absolute;
+    top:7rem;
+    bottom: 1rem;
+    width: 50px;
+}
+#sql{
+
+    position: absolute;
+    bottom:2rem;
+    left: 19rem;
+}
+#vsc{
+
+    position: absolute;
+    top:2rem;
+    right: 9rem;
+}
+
+.down_grid_Container{
+    width: 100%;
+    height: 100%;
+    background-color: var(--true-black);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.navegation{
+    background-color: #fff;
+    border-right: 2px solid var(--primary-color);
+}
+.cursos{
+    grid-column: span 2;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    padding: 10px;
+
+}
+.flex_Cert_Container{
+    box-shadow: 0 1.25em 3.43em rgba(0,0,0,0.08);
+    border-radius: 0.5em;
+    border-bottom:2px solid var(--primary-color);
+    border-right: 2px solid var(--primary-color);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+    padding: 10px;
+}
+.inner_flex_cert_Container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    padding: 5px;
+    gap: 1rem;
+}
+.trouble{
+    margin-left: 30px;
+}
+
+
+.made{
+    grid-column: span 3;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.made p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+   .container_grid{
+    text-align: center;
+   }
+   .made{
+    height: 100px;
+}
+
+:is(#vb,#ts,#sql){
+    display: none;
+}
+.trouble{
+    margin-left: 0;
+}
+.flex_Cert_Container{
+    width: 70%;
+}
+  }

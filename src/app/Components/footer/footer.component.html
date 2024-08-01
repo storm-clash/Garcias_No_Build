@@ -1,0 +1,90 @@
+<div class="container_grid">
+
+    <div class="upper_grid_Container">
+        <h1>"El éxito es la suma de pequeños esfuerzos repetidos día tras día."</h1>
+        <h5>– Robert Collier</h5>
+        <img id="vb" src="assets/images/vb.png" alt="ts icon">
+        <img id="sql" src="assets/images/sql.png" alt="ts icon">
+        <img id="vsc" src="assets/images/vsc.png" alt="ts icon">
+        <img id="ts" src="assets/images/ts.png" alt="ts icon">
+    </div>
+
+    <div class="down_grid_Container">
+            <div class="navegation">
+                <div class="center_flex">
+                    <ul class="list_Content">
+                        <li class="nav_item">
+                            <a (click)="scrollTo('hoIam')">WHO IAM</a>
+                        </li>
+                        <li class="nav_item">
+                            <a (click)="scrollTo('about')">ABOUT ME</a>
+                        </li>
+                        <li class="nav_item">
+                            <a (click)="scrollTo('services')">SERVICES</a>
+                        </li>
+                        <li class="nav_item">
+                            <a (click)="scrollTo('skills')">SKILLS</a>
+                        </li>
+                        <li class="nav_item">
+                            <a (click)="scrollTo('portfolio')">PORTFOLIO</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cursos">
+                <h3>Latest Certificates Earned</h3>
+                <div class="flex_Cert_Container">
+                  <div class="inner_flex_cert_Container">
+                    <div class="icon">
+                        <img src="assets/images/freecodecamp.png" alt="freecodecamp icon">
+                        <img src="assets/images/microsoft.png" alt="microsoft icon">     
+                    </div>
+                    <div class="description">
+                         <p>Foundational C# with Microsoft</p>   
+                    </div>
+                  </div>
+                </div>
+                <div class="flex_Cert_Container">
+                    <div class="inner_flex_cert_Container">
+                    <div class="icon">
+                        <img src="assets/images/freecodecamp.png" alt="freecodecamp icon">  
+                    </div>
+                    <div class="description trouble">
+                         <p>Responsive Web Design</p>   
+                    </div>
+                </div>
+                </div>
+                <div class="flex_Cert_Container">
+                    <div class="inner_flex_cert_Container">
+                    <div class="icon">
+                        <img src="assets/images/coursera.png" alt="freecodecamp icon">    
+                    </div>
+                    <div class="description trouble">
+                         <p>Crash Course on Python</p>   
+                    </div>
+                </div>
+            </div>
+                <div class="flex_Cert_Container">
+                    <div class="inner_flex_cert_Container">
+                    <div class="icon">
+                        <img src="assets/images/coursera.png" alt="freecodecamp icon">
+                        <img src="assets/images/google.png" alt="microsoft icon">     
+                    </div>
+                    <div class="description">
+                         <p>Google It Support Specialist</p>   
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="made">
+                <p *ngIf="isMobileResolution; else desktopContent">
+                   Made with&nbsp;&nbsp;<img src="assets/images/angular.png" alt="Angular Logo" />&nbsp;&nbsp;by Jesus Garcia, Jun/2024
+                  </p>
+                  <ng-template #desktopContent>
+                    <p>Made with Angular by Jesus Garcia, Jun/2024</p>
+                  </ng-template>
+                
+            </div>
+    </div>
+
+</div>
