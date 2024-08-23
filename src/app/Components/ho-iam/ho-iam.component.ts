@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollService } from '../../Services/scroll.service';
 
 @Component({
   selector: 'app-ho-iam',
@@ -9,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class HoIamComponent {
 
+  constructor(private scrollService:ScrollService){}
+
+  scrollTo(section: string) {
+    this.scrollService.scrollTo(section);
+  }
 }

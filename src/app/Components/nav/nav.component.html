@@ -25,7 +25,7 @@
                 <a (click)="scrollTo('portfolio')">PORTFOLIO</a>
             </li>
         </ul>
-    </ng-template>
+       </ng-template>
         <ul *ngIf="isMobileResolution; else desktopContent"  [ngClass]="{'list_Content': true, 'expanded': isExpanded, 'collapsed': !isExpanded}" (click)="toggleWidth()">
             <li class="nav_item">
                 <a (click)="scrollTo('hoIam')"><img src="assets/images/who.png" alt="freecodecamp icon"></a>
@@ -43,9 +43,45 @@
                 <a (click)="scrollTo('portfolio')"><img src="assets/images/portfolio.png" alt="freecodecamp icon"></a>
             </li>
         </ul>
-        <img *ngIf="isMobileResolution" src="assets/images/menu.png" alt="freecodecamp icon" (click)="toggleWidth()">
+        <ul class="movil_Ul" *ngIf="isMobileResolution" (click)="toggleMenu()">
+            <li class="hamburger"></li>
+            <li class="hamburger"></li>
+            <li class="hamburger"></li>
+        </ul>
+
+        <div class="hamburger__Menu-container" >
+
+            <a (click)="scrollTo('hoIam')">
+                <div>H</div>
+                <span class="link-text">Hho I am</span>
+            </a>
+       
+            <a (click)="scrollTo('about')">
+                <div>A</div>
+                <span class="link-text">About Me</span>
+            </a>
+       
+            <a (click)="scrollTo('services')">
+                <div>S</div>
+                <span class="link-text">Services</span>
+            </a>
+            <a (click)="scrollTo('skills')">
+                <div>S</div>
+                <span class="link-text">Skills</span>
+            </a>
+
+            <a (click)="scrollTo('portfolio')">
+                <div>P</div>
+                <span class="link-text">Portfolio</span>
+            </a>
+            <a id="hamburger_Home" onclick="location.href='https://www.linkedin.com/in/jesuscode'">
+                <img src="assets/images/linkedin.png" alt="My LinkedIn Profile" >
+                <span class="link-text">LinkedIn</span>
+            </a>
+        </div>
+        <!-- <img *ngIf="isMobileResolution" src="assets/images/menu.png" alt="freecodecamp icon" (click)="toggleWidth()"> -->
     </div>
-    <div class="right_flex"></div>
+   
 
 </div>
 <router-outlet></router-outlet>
