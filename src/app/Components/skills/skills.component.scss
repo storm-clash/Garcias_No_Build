@@ -168,9 +168,9 @@
         margin-top: 4rem;
         height: auto;
     }
-    // .left_grid, .right_grid {
-    //     flex: 1;
-    // }
+    .left_grid, .right_grid {
+        height: auto;
+    }
     
     .right_grid {
         order: 2; 
@@ -181,6 +181,9 @@
     .left_grid img{
         width: 400px;
         border-radius: 8px;
+    }
+    .flex_container {
+        height: auto;
     }
     .flex_container h1{
         display: none;
