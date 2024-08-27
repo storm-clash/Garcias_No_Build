@@ -145,16 +145,15 @@ visibility: hidden;
 opacity: 0;
 }
 .show {
-    width: 12.5rem;
+    width: 100%;
     height: auto;
     visibility: visible;
     opacity: 1;
     position: absolute;
     top:50px;
-    right: 50px;
+    right: 0;
     border: 2px solid #ccc;
     padding: 10px 20px;
-    transform: translate(-20px,20px);
 }
 
 .hamburger__Menu-container a {
@@ -270,6 +269,12 @@ opacity: 0;
   }
 
 @media (min-width: 375px) and (max-width: 812px) {
+    .flex_container {
+        justify-content: space-around;
+        width: 100dvw;
+        padding: 0 .5rem;
+        box-sizing: border-box;
+    }
     .container_grid{
         display: block;
     }
@@ -297,6 +302,7 @@ opacity: 0;
         align-items: center;
         justify-content: end;
         padding-right: 10px;
+        width: 70%;
         flex-grow: 1;
     flex-shrink: 0;
     flex-basis: auto;
